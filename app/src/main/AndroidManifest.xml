@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainMenu" />
-        <activity android:name=".HeartSeeker"></activity>
+        <activity android:name=".HeartSeeker" />
+        <activity android:name=".HelpMenu"></activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.sosy.qbielka.loveseeker;
 
 /**
+ * Singleton for board options
  * Created by Quince Bielka on 2018-02-15.
  */
 
@@ -21,9 +22,21 @@ class Options {
         NUM_ROWS = rows;
         NUM_COLS = cols;
     }
-    
+
     static void setNumHearts(int hearts){
         NUM_HEARTS = hearts;
+    }
+
+    static int getNumHearts(){
+        return NUM_HEARTS;
+    }
+
+    static int getNumRows(){
+        return NUM_ROWS;
+    }
+
+    static int getNumCols(){
+        return NUM_COLS;
     }
 
     private Options() {

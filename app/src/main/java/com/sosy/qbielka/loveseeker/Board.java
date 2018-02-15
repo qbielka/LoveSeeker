@@ -1,5 +1,7 @@
 package com.sosy.qbielka.loveseeker;
 
+import android.app.VoiceInteractor;
+
 /**
  * Created by Quince Bielka on 2018-02-14.
  * Holds a state of the board
@@ -7,22 +9,24 @@ package com.sosy.qbielka.loveseeker;
 
 public class Board {
     public static final int SENTENTIAL_HEART = -1;
-    public Tile board[][];
+    private Tile board[][];
     private boolean boardUISeen[][];
     private int maxNumRows;
     private int maxNumCols;
     private int scansUsed;
     private int numHeartsRevealed;
+    private int totalNumHearts;
 
-    Board(int numHearts, int numRows, int numCols){
+    Board(){
         scansUsed = 0;
         numHeartsRevealed = 0;
-        maxNumRows = numRows;
-        maxNumCols = numCols;
+        totalNumHearts = Options.getNumHearts();
+        maxNumRows = Options.getNumRows();
+        maxNumCols = Options.getNumCols();
         board = new Tile[maxNumRows][maxNumCols];
         boardUISeen = new boolean[maxNumRows][maxNumCols];
         makeBlank();
-        makeHearts(numHearts);
+        makeHearts(totalNumHearts);
     }
 
     // getters
@@ -34,13 +38,17 @@ public class Board {
         return numHeartsRevealed;
     }
 
+    public int getTotalNumHearts(){
+        return totalNumHearts;
+    }
+
     public Tile getTile(int row, int col){
         return board[row][col];
     }
 
 
     // returns -1 if it sees a new heart
-    // else returns number of hidden hearts
+    // else returns number of hidden hearts in row and column
     public int scan(int row, int col) throws Exception{
         boundsCheck(row, col);
 
@@ -71,7 +79,6 @@ public class Board {
         }
     }
 
-    // recursion
     private int getNumHiddenRecursiveRows(int row, int col, int difference){
         if(row < maxNumRows && row > 0){
             if(boardUISeen[row][col]){
@@ -104,7 +111,6 @@ public class Board {
         }
     }
 
-    // part of creation
     private void makeBlank() {
         for(int row = 0; row < maxNumRows; row ++){
             for(int column = 0; column < maxNumCols; column ++){
