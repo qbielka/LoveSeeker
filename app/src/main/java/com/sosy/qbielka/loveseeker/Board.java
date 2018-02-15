@@ -7,7 +7,7 @@ package com.sosy.qbielka.loveseeker;
 
 public class Board {
     public static final int SENTENTIAL_HEART = -1;
-    private Tile board[][];
+    public Tile board[][];
     private boolean boardUISeen[][];
     private int maxNumRows;
     private int maxNumCols;
