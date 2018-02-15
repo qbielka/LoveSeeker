@@ -6,8 +6,6 @@ package com.sosy.qbielka.loveseeker;
  */
 
 public class Board {
-    private final int UP = 1;
-    private final int DOWN = -1;
     private Tile board[][];
     private boolean boardUISeen[][];
     private int rows;
@@ -47,6 +45,8 @@ public class Board {
         }
 
         int sum = 0;
+        final int UP = 1;
+        final int DOWN = -1;
         sum+=getNumHiddenRecursiveCols(row, col, UP);
         sum+=getNumHiddenRecursiveCols(row, col, DOWN);
         sum+=getNumHiddenRecursiveRows(row, col, UP);
