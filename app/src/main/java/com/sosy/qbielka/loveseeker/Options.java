@@ -11,31 +11,31 @@ class Options {
     private static int NUM_ROWS = 6;
     private static int NUM_COLS = 4;
 
-    static Options getInstance() {
+    public static Options getInstance() {
         if(currentOptions == null){
             currentOptions = new Options();
         }
         return currentOptions;
     }
 
-    static void setRowsAndCols(int rows, int cols){
+    public static void setRowsAndCols(int rows, int cols){
         NUM_ROWS = rows;
         NUM_COLS = cols;
     }
 
-    static void setNumHearts(int hearts){
+    public static void setNumHearts(int hearts){
         NUM_HEARTS = hearts;
     }
 
-    static int getNumHearts(){
+    public static int getNumHearts(){
         return NUM_HEARTS;
     }
 
-    static int getNumRows(){
+    public static int getNumRows(){
         return NUM_ROWS;
     }
 
-    static int getNumCols(){
+    public static int getNumCols(){
         return NUM_COLS;
     }
 

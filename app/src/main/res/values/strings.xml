@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Love Seeker</string>
+    <string name="help_title_string">This is the Help Menu for Love Seeker</string>
+    <string name="help_explanation">Love Seeker is a game where you search for and find love with as few embarrassments as possible. You will select Tiles and be told how many of your potential loves are in that row or column and have to think about how best to find them. The goal here is to find them all with as few embarrassments as possible, but remember nothing bad happens if you ask the wrong person out.</string>
 </resources>
