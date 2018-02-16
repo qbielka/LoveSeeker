@@ -9,17 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeScreen">
+        <activity android:name=".WelcomeScreen"
+            android:screenOrientation = "landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainMenu" />
-        <activity android:name=".HeartSeeker" />
-        <activity android:name=".HelpMenu" />
-        <activity android:name=".OptionsMenu"></activity>
+        <activity android:name=".MainMenu"
+            android:screenOrientation = "landscape"/>
+        <activity android:name=".HeartSeeker"
+            android:screenOrientation = "landscape" />
+        <activity android:name=".HelpMenu"
+            android:screenOrientation = "landscape" />
+        <activity android:name=".OptionsMenu"
+            android:screenOrientation = "landscape">
+
+        </activity>
     </application>
 
 </manifest>
