@@ -10,4 +10,6 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
     }
+
+    //TODO: Create welcoming animation with skip option available as a button.
 }
