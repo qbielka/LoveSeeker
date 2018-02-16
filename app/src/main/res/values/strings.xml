@@ -11,4 +11,6 @@
     <string name="help">Help</string>
     <string name="options">Options</string>
     <string name="play">Play Button</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="skip">Skip</string>
 </resources>

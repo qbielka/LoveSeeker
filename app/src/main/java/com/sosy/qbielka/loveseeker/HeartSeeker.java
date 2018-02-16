@@ -1,5 +1,7 @@
 package com.sosy.qbielka.loveseeker;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -142,4 +144,8 @@ public class HeartSeeker extends AppCompatActivity {
     }
 
     //TODO: congratulatory dialogue if game's won: an image and a text
+
+    public static Intent makeIntent(Context context) {
+        return new Intent(context, HeartSeeker.class);
+    }
 }
