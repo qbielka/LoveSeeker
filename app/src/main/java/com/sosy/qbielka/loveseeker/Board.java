@@ -8,7 +8,6 @@ import android.app.VoiceInteractor;
  */
 
 public class Board {
-    public static final int SENTENTIAL_HEART = -1;
     private Tile board[][];
     private boolean boardUISeen[][];
     private int maxNumRows;
@@ -34,6 +33,14 @@ public class Board {
         return scansUsed;
     }
 
+    public int getMaxNumRows() {
+        return maxNumRows;
+    }
+
+    public int getMaxNumCols() {
+        return maxNumCols;
+    }
+
     public int getNumHeartsRevealed(){
         return numHeartsRevealed;
     }
@@ -46,22 +53,30 @@ public class Board {
         return board[row][col];
     }
 
-
-    // returns -1 if it sees a new heart
-    // else returns number of hidden hearts in row and column
-    public int scan(int row, int col) throws Exception{
+    //checks bounds, returns true if sees a new heart
+    //else return false
+    public boolean heartRevealed(int row, int col) throws Exception {
         boundsCheck(row, col);
 
         if(!boardUISeen[row][col] && Tile.HEART == board[row][col]){
             boardUISeen[row][col] = true;
             numHeartsRevealed++;
-            return SENTENTIAL_HEART;
+            return true;
         }
+
+        return false;
+
+    }
+
+    // checks bounds, returns number of hidden hearts in row and column
+    public int scan(int row, int col) throws Exception{
+        boundsCheck(row, col);
 
         if(!boardUISeen[row][col]) {
             boardUISeen[row][col] = true;
             scansUsed++;
         }
+
         int sum = 0;
         final int UP = 1;
         final int DOWN = -1;
