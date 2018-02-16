@@ -1,5 +1,7 @@
 package com.sosy.qbielka.loveseeker;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -76,4 +78,8 @@ public class OptionsMenu extends AppCompatActivity {
     }
 
     //TODO: press back to return to main menu
+
+    public static Intent makeIntent(Context context) {
+        return new Intent(context, OptionsMenu.class);
+    }
 }

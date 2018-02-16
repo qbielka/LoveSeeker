@@ -8,4 +8,9 @@
     <string name="lora_bio">Lora Koo helped make this app, she is a very nice person</string>
     <string name="board_size">Board Size</string>
     <string name="of_your_loves"># of your loves</string>
+    <string name="help">Help</string>
+    <string name="options">Options</string>
+    <string name="play">Play Button</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="skip">Skip</string>
 </resources>
