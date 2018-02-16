@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".MainMenu" />
         <activity android:name=".HeartSeeker" />
-        <activity android:name=".HelpMenu"></activity>
+        <activity android:name=".HelpMenu" />
+        <activity android:name=".OptionsMenu"></activity>
     </application>
 
 </manifest>
