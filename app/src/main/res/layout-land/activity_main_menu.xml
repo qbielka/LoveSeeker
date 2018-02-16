@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context="com.sosy.qbielka.loveseeker.MainMenu">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/options_btn"
+            android:contentDescription="@string/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/options_icon"/>
+
+        <ImageButton
+            android:contentDescription="@string/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/help_icon" />
+
+        <ImageButton
+            android:id="@+id/play_btn"
+            android:contentDescription="@string/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/play_icon"/>
+
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
