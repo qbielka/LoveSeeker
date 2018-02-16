@@ -9,16 +9,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="31dp">
 
         <TextView
             android:id="@+id/help_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/help_explanation"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="27dp"
+            android:layout_alignStart="@+id/help_explanation"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="15dp"
             android:text="@string/help_title_string" />
 
         <ImageView
@@ -49,10 +52,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/QuinceHead"
-            android:layout_marginLeft="17dp"
-            android:layout_marginStart="17dp"
             android:layout_marginEnd="117dp"
+            android:layout_marginLeft="17dp"
             android:layout_marginRight="117dp"
+            android:layout_marginStart="17dp"
             android:layout_toEndOf="@+id/QuinceHead"
             android:layout_toRightOf="@+id/QuinceHead"
             android:text="@string/help_explanation" />
@@ -67,16 +70,43 @@
             android:text="@string/back_btn" />
 
         <TextView
-            android:autoLink="web"
             android:id="@+id/hyperlink"
-            android:focusable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/help_back_btn"
             android:layout_alignLeft="@+id/help_explanation"
             android:layout_alignStart="@+id/help_explanation"
-            android:layout_below="@+id/help_explanation"
-            android:layout_marginTop="25dp"
-            android:text="http://www.cs.sfu.ca/CourseCentral/276/bfraser/index.html" />
+            android:layout_alignRight="@+id/help_explanation"
+            android:layout_alignEnd="@+id/help_explanation"
+            android:autoLink="web"
+            android:focusable="true"
+            android:text="@string/class_hyperlink" />
+
+        <TextView
+            android:id="@+id/quince_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lora_bio"
+            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
+            android:layout_toLeftOf="@+id/help_explanation"
+            android:layout_toStartOf="@+id/help_explanation"
+            android:text="@string/quince_bio" />
+
+        <TextView
+            android:id="@+id/lora_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_alignLeft="@+id/LoraHead"
+            android:layout_alignStart="@+id/LoraHead"
+            android:layout_below="@+id/LoraHead"
+            android:layout_marginTop="13dp"
+            android:text="@string/lora_bio"
+            tools:layout_editor_absoluteX="351dp"
+            tools:layout_editor_absoluteY="222dp" />
 
     </RelativeLayout>
+
 </android.support.constraint.ConstraintLayout>
