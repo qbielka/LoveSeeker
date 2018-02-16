@@ -5,6 +5,8 @@ package com.sosy.qbielka.loveseeker;
  * Holds a state of the mine
  */
 
+//TODO: move to model package
+
 public enum Tile {
     HEART, BLANK
 }

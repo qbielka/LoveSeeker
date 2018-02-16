@@ -120,7 +120,7 @@ public class HeartSeeker extends AppCompatActivity {
         //check if game's won
         if (newGame.getNumHeartsRevealed() == MAX_HEARTS) {
             //game is over
-            //TODO: finish game, call animation, go back to Main menu
+            //TODO: finish game, call dialogue, go back to Main menu
         }
     }
 
@@ -141,5 +141,5 @@ public class HeartSeeker extends AppCompatActivity {
         }
     }
 
-    //TODO: animation if game's won
+    //TODO: congratulatory dialogue if game's won: an image and a text
 }

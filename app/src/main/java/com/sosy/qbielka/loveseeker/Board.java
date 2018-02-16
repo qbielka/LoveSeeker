@@ -7,6 +7,8 @@ import android.app.VoiceInteractor;
  * Holds a state of the board
  */
 
+//TODO: move to model package
+
 public class Board {
     private Tile board[][];
     private boolean boardUISeen[][];

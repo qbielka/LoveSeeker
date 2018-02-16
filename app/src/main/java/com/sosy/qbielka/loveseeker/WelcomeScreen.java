@@ -13,4 +13,6 @@ public class WelcomeScreen extends AppCompatActivity {
 
         startActivity(new Intent(WelcomeScreen.this, OptionsMenu.class));
     }
+
+    //TODO: Create welcoming animation with skip option available as a button.
 }
