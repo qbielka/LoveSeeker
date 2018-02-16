@@ -7,9 +7,9 @@ package com.sosy.qbielka.loveseeker;
 
 class Options {
     private static Options currentOptions = null;
-    private static int NUM_HEARTS = 6;
-    private static int NUM_ROWS = 6;
-    private static int NUM_COLS = 4;
+    private int numHearts = 6;
+    private int numRows = 6;
+    private int numCols = 4;
 
     public static Options getInstance() {
         if(currentOptions == null){
@@ -18,25 +18,34 @@ class Options {
         return currentOptions;
     }
 
-    public static void setRowsAndCols(int rows, int cols){
-        NUM_ROWS = rows;
-        NUM_COLS = cols;
+    public void setCurrentOptions(int numRows, int numCols, int numHearts){
+        setNumRows(numRows);
+        setNumCols(numCols);
+        setNumHearts(numHearts);
     }
 
-    public static void setNumHearts(int hearts){
-        NUM_HEARTS = hearts;
+    public void setNumRows(int numRows){
+        this.numRows = numRows;
     }
 
-    public static int getNumHearts(){
-        return NUM_HEARTS;
+    public void setNumCols(int numCols){
+        this.numCols = numCols;
     }
 
-    public static int getNumRows(){
-        return NUM_ROWS;
+    public void setNumHearts(int numHearts){
+        this.numHearts = numHearts;
     }
 
-    public static int getNumCols(){
-        return NUM_COLS;
+    public int getNumHearts(){
+        return numHearts;
+    }
+
+    public int getNumRows(){
+        return numRows;
+    }
+
+    public int getNumCols(){
+        return numCols;
     }
 
     private Options() {

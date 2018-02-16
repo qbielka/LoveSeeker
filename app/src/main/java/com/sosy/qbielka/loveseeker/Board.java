@@ -19,9 +19,10 @@ public class Board {
     Board(){
         scansUsed = 0;
         numHeartsRevealed = 0;
-        totalNumHearts = Options.getNumHearts();
-        maxNumRows = Options.getNumRows();
-        maxNumCols = Options.getNumCols();
+        Options loadCurrentOptions = Options.getInstance();
+        totalNumHearts = loadCurrentOptions.getNumHearts();
+        maxNumRows = loadCurrentOptions.getNumRows();
+        maxNumCols = loadCurrentOptions.getNumCols();
         board = new Tile[maxNumRows][maxNumCols];
         boardUISeen = new boolean[maxNumRows][maxNumCols];
         makeBlank();
