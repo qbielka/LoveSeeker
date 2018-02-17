@@ -6,111 +6,35 @@
     android:layout_height="match_parent"
     tools:context="com.sosy.qbielka.loveseeker.OptionsMenu">
 
-    <RelativeLayout
-        android:layout_width="576dp"
-        android:layout_height="271dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:orientation="vertical"
-            android:id="@+id/linearLayout">
-
-            <TextView
-                android:id="@+id/options_loves_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/of_your_loves"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="6 Loves" />
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="10 Loves" />
-
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="15 Loves" />
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="20 Loves" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:orientation="vertical"
-            android:id="@+id/linearLayout2">
-
-            <TextView
-                android:id="@+id/options_board_size_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/board_size"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="4 rows, 6 cols" />
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="5 rows, 10 cols" />
-
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="6 rows, 15 cols" />
-
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="301dp"
+        android:layout_height="295dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioGroup
             android:id="@+id/radioGroupLoveNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/linearLayout"
-            android:layout_toRightOf="@+id/linearLayout" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="274dp"
+        android:layout_height="315dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioGroup
             android:id="@+id/radioGroupBoardSize"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
-            android:layout_toLeftOf="@+id/linearLayout2"
-            android:layout_toStartOf="@+id/linearLayout2" />
-    </RelativeLayout>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

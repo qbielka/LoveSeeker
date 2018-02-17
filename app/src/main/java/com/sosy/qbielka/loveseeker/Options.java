@@ -5,6 +5,8 @@ package com.sosy.qbielka.loveseeker;
  * Created by Quince Bielka on 2018-02-15.
  */
 
+//TODO: This should also be a model package!
+
 class Options {
     private static Options currentOptions = null;
     private int numHearts = 6;
