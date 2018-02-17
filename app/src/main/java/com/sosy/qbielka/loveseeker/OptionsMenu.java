@@ -47,7 +47,7 @@ public class OptionsMenu extends AppCompatActivity {
             final int loveNum = optionsLoveNums[option];
 
             RadioButton button = new RadioButton(this);
-            button.setText("" + loveNum + " loves");
+            button.setText(("" + loveNum + " loves"));
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -88,13 +88,14 @@ public class OptionsMenu extends AppCompatActivity {
             final int colNum = optionsColsNums[option];
 
             RadioButton button = new RadioButton(this);
-            button.setText("" + rowNum + " rows, " + colNum + " cols");
+            button.setText(("" + rowNum + " rows, " + colNum + " cols"));
 
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     loadCurrentOptions.setNumRows(rowNum);
                     loadCurrentOptions.setNumCols(colNum);
+                    saveBoardSizePreferences(rowNum,colNum);
                 }
             });
 
