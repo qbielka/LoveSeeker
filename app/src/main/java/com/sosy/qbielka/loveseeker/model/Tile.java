@@ -1,4 +1,4 @@
-package com.sosy.qbielka.loveseeker;
+package com.sosy.qbielka.loveseeker.model;
 
 /**
  * Created by Quince Bielka on 2018-02-14.

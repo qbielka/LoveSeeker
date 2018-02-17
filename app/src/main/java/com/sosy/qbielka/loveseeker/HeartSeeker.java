@@ -15,11 +15,10 @@ import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import com.sosy.qbielka.loveseeker.model.Board;
 
 public class HeartSeeker extends AppCompatActivity {
     private static final String HSTAG = "HeartSeeker";
-
-    //TODO: lock all UI pages as Landscape mode only in AndroidManifest.xml
 
     private Board newGame = new Board();
 
@@ -37,8 +36,11 @@ public class HeartSeeker extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("heartseeker", "onCreate hit");
         super.onCreate(savedInstanceState);
+        Log.d("heartseeker", "super.onCreate hit");
         setContentView(R.layout.activity_heart_seeker);
+        Log.d("heartseeker", "setContentView hit");
 
         populateFromBoard();
     }
@@ -46,6 +48,7 @@ public class HeartSeeker extends AppCompatActivity {
     //create Board as new game. pass in values of game size and mine number from options.
     // if user doesn't use options, use default value.
     public void populateFromBoard() {
+        Log.d("heartseeker", "populateFromBoard hit");
         //rows, cols and max # of hearts to populate board is imported from Singleton in Board.java class.
 
         TableLayout table = (TableLayout) findViewById(R.id.boardTable);

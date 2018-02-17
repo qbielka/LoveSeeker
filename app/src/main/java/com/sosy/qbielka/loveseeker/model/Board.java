@@ -1,4 +1,4 @@
-package com.sosy.qbielka.loveseeker;
+package com.sosy.qbielka.loveseeker.model;
 
 import android.app.VoiceInteractor;
 
@@ -18,7 +18,7 @@ public class Board {
     private int numHeartsRevealed;
     private int totalNumHearts;
 
-    Board(){
+    public Board(){
         scansUsed = 0;
         numHeartsRevealed = 0;
         Options loadCurrentOptions = Options.getInstance();
