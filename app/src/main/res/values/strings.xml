@@ -13,4 +13,7 @@
     <string name="play">Play Button</string>
     <string name="main_menu">Main Menu</string>
     <string name="skip">Skip</string>
+    <string name="quince_head">Quince\'s head</string>
+    <string name="lora_head">Lora\'s Head</string>
+    <string name="heart">Heart</string>
 </resources>
