@@ -31,6 +31,25 @@ public class Board {
         makeHearts(totalNumHearts);
     }
 
+    public void foundHeart(int row, int col) throws Exception {
+        for(int x = 0; x < maxNumRows; x++){
+            if(x == row){
+                continue;
+            }
+            if(boardUISeen[x][col]){
+                scan(x, col);
+            }
+        }
+
+        for(int y = 0; y < maxNumCols; y++){
+            if(y == col){
+                continue;
+            }
+            if(boardUISeen[row][y]){
+                scan(row, y);
+            }
+        }
+    }
     // getters
     public int getScansUsed(){
         return scansUsed;
