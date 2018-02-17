@@ -71,6 +71,7 @@ public class Board {
 
     }
 
+
     // checks bounds, returns number of hidden hearts in row and column
     public int scan(int row, int col) throws Exception{
         boundsCheck(row, col);

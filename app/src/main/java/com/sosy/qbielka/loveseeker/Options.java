@@ -7,7 +7,7 @@ package com.sosy.qbielka.loveseeker;
 
 //TODO: This should also be a model package!
 
-class Options {
+public class Options {
     private static Options currentOptions = null;
     private int numHearts = 6;
     private int numRows = 6;
