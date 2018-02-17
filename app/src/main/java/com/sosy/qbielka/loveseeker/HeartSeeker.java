@@ -9,6 +9,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TableLayout;
@@ -16,6 +17,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 public class HeartSeeker extends AppCompatActivity {
+    private static final String HSTAG = "HeartSeeker";
 
     //TODO: lock all UI pages as Landscape mode only in AndroidManifest.xml
 
@@ -26,6 +28,12 @@ public class HeartSeeker extends AppCompatActivity {
     int MAX_HEARTS = newGame.getTotalNumHearts();
 
     Button[][] boardOfButtons = new Button[MAX_ROWS][MAX_COLS];
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d(HSTAG, "Starts");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +49,6 @@ public class HeartSeeker extends AppCompatActivity {
         //rows, cols and max # of hearts to populate board is imported from Singleton in Board.java class.
 
         TableLayout table = (TableLayout) findViewById(R.id.boardTable);
-
         for (int row = 0; row < MAX_ROWS; row++) {
             TableRow tableRow = new TableRow(this);
             //scale table to fill space

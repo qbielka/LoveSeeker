@@ -145,8 +145,8 @@ public class Board {
     private void makeHearts(int numHearts) {
         int hearts = 0;
         while(hearts < numHearts){
-            int row = (int) (Math.random() * maxNumCols);
-            int column = (int) (Math.random() * maxNumRows);
+            int row = (int) (Math.random() * maxNumRows);
+            int column = (int) (Math.random() * maxNumCols);
             if( board[row][column] == Tile.BLANK){
                 board[row][column] = Tile.HEART;
                 hearts++;
