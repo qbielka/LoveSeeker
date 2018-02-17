@@ -9,8 +9,6 @@ import android.widget.Button;
 
 public class HelpMenu extends AppCompatActivity {
 
-    //TODO: mipmap/head1 seems to be missing in xml file!
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
