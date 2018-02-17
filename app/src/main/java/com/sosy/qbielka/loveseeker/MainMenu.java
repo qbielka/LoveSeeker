@@ -21,7 +21,7 @@ public class MainMenu extends AppCompatActivity {
 
         btnPress(helpBtn, HelpMenu.makeIntent(MainMenu.this));
 
-        btnPress(playBtn, HelpMenu.makeIntent(MainMenu.this));
+        btnPress(playBtn, HeartSeeker.makeIntent(MainMenu.this));
 
         btnPress(optionsBtn, OptionsMenu.makeIntent(MainMenu.this));
     }
