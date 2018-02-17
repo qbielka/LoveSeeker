@@ -22,6 +22,12 @@
             android:layout_marginEnd="44dp"
             android:layout_marginRight="44dp"
             android:text="@string/skip" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/wallpaper">
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
