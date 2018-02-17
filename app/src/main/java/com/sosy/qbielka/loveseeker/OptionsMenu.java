@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import com.sosy.qbielka.loveseeker.model.Options;
 
 public class OptionsMenu extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.sosy.qbielka.loveseeker;
+package com.sosy.qbielka.loveseeker.model;
 
 /**
  * Singleton for board options
