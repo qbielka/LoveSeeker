@@ -10,8 +10,8 @@ package com.sosy.qbielka.loveseeker.model;
 public class Options {
     private static Options currentOptions = null;
     private int numHearts = 6;
-    private int numRows = 6;
-    private int numCols = 4;
+    private int numRows = 4;
+    private int numCols = 6;
 
     public static Options getInstance() {
         if(currentOptions == null){
