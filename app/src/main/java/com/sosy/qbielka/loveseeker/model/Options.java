@@ -22,21 +22,30 @@ public class Options {
         return currentOptions;
     }
 
-    public void setCurrentOptions(int numRows, int numCols, int numHearts){
+    public void setCurrentOptions(int numRows, int numCols, int numHearts) throws Exception{
         setNumRows(numRows);
         setNumCols(numCols);
         setNumHearts(numHearts);
     }
 
-    public void setNumRows(int numRows){
+    public void setNumRows(int numRows)throws Exception{
+        if(numRows < 1){
+            throw new IllegalArgumentException("Invalid num Rows");
+        }
         this.numRows = numRows;
     }
 
-    public void setNumCols(int numCols){
+    public void setNumCols(int numCols) throws Exception{
+        if(numCols < 1){
+            throw new IllegalArgumentException("Invalid num Columns");
+        }
         this.numCols = numCols;
     }
 
-    public void setNumHearts(int numHearts){
+    public void setNumHearts(int numHearts) throws Exception{
+        if(numHearts < 1){
+            throw new IllegalArgumentException("Invalid num Hearts");
+        }
         this.numHearts = numHearts;
     }
 

@@ -59,8 +59,9 @@ public class OptionsMenu extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    loadCurrentOptions.setNumHearts(loveNum);
-
+                    try {
+                        loadCurrentOptions.setNumHearts(loveNum);
+                    }catch (Exception e){}
                     saveLoveNumPreferences(loveNum);
                 }
             });
@@ -100,8 +101,10 @@ public class OptionsMenu extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    loadCurrentOptions.setNumRows(rowNum);
-                    loadCurrentOptions.setNumCols(colNum);
+                    try {
+                        loadCurrentOptions.setNumRows(rowNum);
+                        loadCurrentOptions.setNumCols(colNum);
+                    }catch(Exception e){}
                     saveBoardSizePreferences(rowNum,colNum);
                 }
             });
