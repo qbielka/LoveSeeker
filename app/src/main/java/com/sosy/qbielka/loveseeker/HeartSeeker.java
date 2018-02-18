@@ -1,5 +1,6 @@
 package com.sosy.qbielka.loveseeker;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -7,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -106,9 +108,6 @@ public class HeartSeeker extends AppCompatActivity {
         Button button = boardOfButtons[row][col];
         //pass in row and col and if clicked, show heart or count scans in row and col.
 
-        //lock sizes of buttons
-        lockButtonSizes(row, col);
-
         if (newGame.heartRevealed(row, col)) {
             //change background into heart
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -121,6 +120,9 @@ public class HeartSeeker extends AppCompatActivity {
             } else {
                 button.setBackgroundResource(R.mipmap.ic_heart_background);
             }
+
+            //lock button sizes
+            lockButtonSizes(MAX_ROWS, MAX_COLS);
 
             //count++ on heartCount
             TextView textView = (TextView) findViewById(R.id.heartCount);
@@ -155,6 +157,7 @@ public class HeartSeeker extends AppCompatActivity {
         if (newGame.getNumHeartsRevealed() == MAX_HEARTS) {
             //game is over
             //TODO: finish game, call dialogue, go back to Main menu
+            finishGame();
         }
     }
 
@@ -176,6 +179,14 @@ public class HeartSeeker extends AppCompatActivity {
     }
 
     //TODO: congratulatory dialogue if game's won: an image and a text
+
+    private void finishGame() {
+        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        congratsMessageFragment dialog = new congratsMessageFragment();
+        dialog.show(manager, "congratulatoryMessage");
+
+        finish();
+    }
 
     public static Intent makeIntent(Context context) {
         return new Intent(context, HeartSeeker.class);
