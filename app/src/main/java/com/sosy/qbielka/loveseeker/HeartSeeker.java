@@ -1,6 +1,5 @@
 package com.sosy.qbielka.loveseeker;
 
-import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -8,7 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
-import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -181,7 +180,7 @@ public class HeartSeeker extends AppCompatActivity {
     //TODO: congratulatory dialogue if game's won: an image and a text
 
     private void finishGame() {
-        android.support.v4.app.FragmentManager manager = getSupportFragmentManager();
+        FragmentManager manager = getSupportFragmentManager();
         congratsMessageFragment dialog = new congratsMessageFragment();
         dialog.show(manager, "congratulatoryMessage");
 
