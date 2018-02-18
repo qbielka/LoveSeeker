@@ -181,7 +181,7 @@ public class HeartSeeker extends AppCompatActivity {
     }
 
     //TODO: congratulatory dialogue if game's won: an image and a text
-
+    
     private void finishGame() {
         FragmentManager manager = getSupportFragmentManager();
         congratsMessageFragment dialog = new congratsMessageFragment();

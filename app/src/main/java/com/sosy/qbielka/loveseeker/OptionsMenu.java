@@ -14,6 +14,7 @@ import com.sosy.qbielka.loveseeker.model.Options;
 
 public class OptionsMenu extends AppCompatActivity {
 
+    public static final String BOARD_ROW_PREF_KEY = "boardRowPreferences";
     private Options loadCurrentOptions;
 
     private int[] optionsLoveNums = {6, 10, 15, 20};
@@ -83,7 +84,7 @@ public class OptionsMenu extends AppCompatActivity {
     static public int getLoveNumPreferences(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("appPreferences", MODE_PRIVATE);
         //TODO: get default value
-        return prefs.getInt("loveNumPreferences", 0);
+        return prefs.getInt("loveNumPreferences", 6);
     }
 
     private void createOptionMenuBoardSize() {
@@ -124,13 +125,13 @@ public class OptionsMenu extends AppCompatActivity {
     static public int getBoardRowPreferences(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("boardPreferences", MODE_PRIVATE);
         //TODO: get default value
-        return prefs.getInt("boardRowPreferences", 0);
+        return prefs.getInt(BOARD_ROW_PREF_KEY, 4);
     }
 
     static public int getBoardColPreferences(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("boardPreferences", MODE_PRIVATE);
         //TODO: get default value
-        return prefs.getInt("boardColPreferences", 0);
+        return prefs.getInt("boardColPreferences", 6);
     }
 
     public static Intent makeIntent(Context context) {

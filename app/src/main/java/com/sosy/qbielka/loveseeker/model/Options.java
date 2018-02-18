@@ -1,5 +1,7 @@
 package com.sosy.qbielka.loveseeker.model;
 
+import static com.sosy.qbielka.loveseeker.OptionsMenu.BOARD_ROW_PREF_KEY;
+
 /**
  * Singleton for board options
  * Created by Quince Bielka on 2018-02-15.
