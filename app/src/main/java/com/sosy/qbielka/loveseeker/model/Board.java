@@ -5,7 +5,6 @@ package com.sosy.qbielka.loveseeker.model;
  * Holds a state of the board
  */
 
-//TODO: move to model package
 
 public class Board {
     public static final int SENTENTIAL = -1;
@@ -18,6 +17,7 @@ public class Board {
     private int numHeartsRevealed;
     private int totalNumHearts;
 
+    //constructor
     public Board(){
         scansUsed = 0;
         numHeartsRevealed = 0;
@@ -95,6 +95,7 @@ public class Board {
         return sum;
     }
 
+    //update tile to seen
     private void updateBoardUISeen(boolean[] booleans, int col) {
         if(!booleans[col]) {
             booleans[col] = true;

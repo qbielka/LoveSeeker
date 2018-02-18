@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -42,6 +43,38 @@ public class OptionsMenu extends AppCompatActivity {
         createOptionMenuBoardSize();
         int rowValue = getBoardRowPreferences(this);
         int colValue = getBoardColPreferences(this);
+
+        //additional features: reset high points and games number counter
+        resetHighPoints();
+        resetNumGamesCounter();
+
+    }
+
+    //additional features: reset number of games played
+    private void resetNumGamesCounter() {
+        Button button = (Button) findViewById(R.id.resetGamesCounterBtn);
+        button.setText("Reset Games Counter");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadCurrentOptions.resetNumGamesCounter();
+            }
+        });
+
+    }
+
+    //additional features: reset high points
+    private void resetHighPoints() {
+        Button button = (Button) findViewById(R.id.resetHighPointsBtn);
+        button.setText("Reset High Points");
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadCurrentOptions.resetHighPoints();
+            }
+        });
 
     }
 
@@ -84,7 +117,7 @@ public class OptionsMenu extends AppCompatActivity {
 
     static public int getLoveNumPreferences(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("appPreferences", MODE_PRIVATE);
-        //TODO: get default value
+
         return prefs.getInt("loveNumPreferences", 6);
     }
 
@@ -127,13 +160,11 @@ public class OptionsMenu extends AppCompatActivity {
 
     static public int getBoardRowPreferences(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("boardPreferences", MODE_PRIVATE);
-        //TODO: get default value
         return prefs.getInt(BOARD_ROW_PREF_KEY, 4);
     }
 
     static public int getBoardColPreferences(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("boardPreferences", MODE_PRIVATE);
-        //TODO: get default value
         return prefs.getInt("boardColPreferences", 6);
     }
 

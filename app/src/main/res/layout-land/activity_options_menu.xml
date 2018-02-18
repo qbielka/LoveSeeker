@@ -9,34 +9,69 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteX="136dp"
         tools:layout_editor_absoluteY="0dp">
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="100dp"
             android:background="@color/colorPink"
-            android:orientation="vertical"
-            android:id="@+id/linearLayout2">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title_options"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="Options"
+                android:layout_marginTop="11dp"
+                android:textColor="@color/colorPurple"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:layout_centerHorizontal="true"
-                android:text="Options"
-                android:textSize="18sp"
-                android:textColor="@color/colorPurple"/>
+                android:orientation="horizontal"
+                android:id="@+id/linearLayoutBtn">
+
+                <Button
+                    android:id="@+id/resetHighPointsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/title_options"
+                    android:layout_weight="1"
+                    android:text="Button" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_toEndOf="@+id/linearLayoutBtn"
+                android:layout_toRightOf="@+id/linearLayoutBtn">
+
+                <Button
+                    android:id="@+id/resetGamesCounterBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/title_options"
+                    android:layout_weight="1"
+                    android:text="Button" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="vertical"
-            android:id="@+id/linearLayout4"
-            android:layout_below="@+id/linearLayout2"
-            android:background="@color/colorPink">
+            android:id="@+id/layoutBoardSize"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPink"
+            android:layout_below="@+id/linearLayout2">
 
             <RadioGroup
                 android:id="@+id/radioGroupBoardSize"
@@ -45,14 +80,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/linearLayout4"
-            android:orientation="vertical"
-            android:background="@color/colorPink">
+            android:id="@+id/layoutHeartNum"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPink"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_toEndOf="@+id/layoutBoardSize"
+            android:layout_toRightOf="@+id/layoutBoardSize">
 
             <RadioGroup
                 android:id="@+id/radioGroupLoveNum"
@@ -60,11 +95,32 @@
                 android:layout_height="match_parent"
                 android:layout_alignLeft="@+id/linearLayout"
                 android:layout_alignStart="@+id/linearLayout"
-                android:layout_alignTop="@+id/linearLayout" >
+                android:layout_alignTop="@+id/linearLayout">
 
             </RadioGroup>
-
         </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/linearLayout4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_below="@+id/linearLayout2"-->
+            <!--android:background="@color/colorPink"-->
+            <!--android:orientation="vertical">-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_below="@+id/linearLayout4"-->
+            <!--android:background="@color/colorPink"-->
+            <!--android:orientation="vertical">-->
+
+        <!--</LinearLayout>-->
 
     </RelativeLayout>
 

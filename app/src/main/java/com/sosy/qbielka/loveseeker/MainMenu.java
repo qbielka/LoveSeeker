@@ -9,8 +9,6 @@ import android.widget.ImageButton;
 
 public class MainMenu extends AppCompatActivity {
 
-    //TODO: lock all UI pages as Landscape mode only in AndroidManifest.xml
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +30,6 @@ public class MainMenu extends AppCompatActivity {
         optionsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("main_menu", "clicked the heart seeker button from main");
                 startActivity(intent);
             }
         });
