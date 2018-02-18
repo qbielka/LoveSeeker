@@ -48,6 +48,14 @@ public class HeartSeeker extends AppCompatActivity {
     //create Board as new game. pass in values of game size and mine number from options.
     // if user doesn't use options, use default value.
     public void populateFromBoard() {
+        TextView textViewHeart = (TextView) findViewById(R.id.heartCount);
+        int heartIntCount = newGame.getNumHeartsRevealed();
+        textViewHeart.setText("Found " + heartIntCount + " of " + MAX_HEARTS + " hearts.");
+
+        TextView textViewScan = (TextView) findViewById(R.id.scanCount);
+        int scanIntCount = newGame.getScansUsed();
+        textViewScan.setText("# Scans used: " + scanIntCount);
+
         Log.d("heartseeker", "populateFromBoard hit");
         //rows, cols and max # of hearts to populate board is imported from Singleton in Board.java class.
 
@@ -87,6 +95,7 @@ public class HeartSeeker extends AppCompatActivity {
                         }
                     }
                 });
+
                 tableRow.addView(button);
             }
         }
@@ -116,7 +125,20 @@ public class HeartSeeker extends AppCompatActivity {
             //count++ on heartCount
             TextView textView = (TextView) findViewById(R.id.heartCount);
             int heartIntCount = newGame.getNumHeartsRevealed();
-            textView.setText("Found " + heartIntCount + " of " + MAX_HEARTS + "mines.");
+            textView.setText("Found " + heartIntCount + " of " + MAX_HEARTS + " hearts.");
+
+            //update scan number for row and column of the tile
+            newGame.foundHeart(row, col);
+
+            for (int tempRow = 0; tempRow < MAX_ROWS; tempRow++) {
+                for (int tempCol = 0; tempCol < MAX_COLS; tempCol++) {
+                    Button tempButton = boardOfButtons[tempRow][tempCol];
+                    int buttonScan = newGame.getNumHeartsRowCol(tempRow, tempCol);
+                    if (buttonScan != -1) {
+                        tempButton.setText("" + buttonScan);
+                    }
+                }
+            }
         } else {
             int buttonScan = newGame.scan(row, col);
 

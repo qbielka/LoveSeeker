@@ -72,6 +72,9 @@ public class Board {
 
     }
 
+    //bounds checks
+    //if tile is unseen square, set tile to seen, update scansUsed
+    //return sum of hearts in row and col by calling getScan, update boardNumbers for row and col
     public int scan(int row, int col) throws Exception{
         boundsCheck(row, col);
 
@@ -96,8 +99,9 @@ public class Board {
         }
     }
 
-
-    private void foundHeart(int row, int col) throws Exception {
+    //if heart is found in row and col, foundHeart updates scan number of the tiles
+    // ...in its row and column by calling updateBoardNums
+    public void foundHeart(int row, int col) throws Exception {
         for(int x = 0; x < maxNumRows; x++){
             if(x == row){
                 continue;
@@ -116,19 +120,26 @@ public class Board {
         }
     }
 
-    private int updateBoardNums(int row, int col) throws Exception{
-        boundsCheck(row, col);
 
+    //only called in foundHeart.
+    private int updateBoardNums(int row, int col) throws Exception{
+        //checks bounds
+        boundsCheck(row, col);
+        //in the row of board, if specific tile is unseen, set as seen and update scansUsed
         updateBoardUISeen(boardUISeen[row], col);
 
         int sum = 0;
 
+        //get sum of scans in row and col total
         sum = getScan(row, col, sum);
 
+        //update sum number for specific tile in boardNumbers
         boardNumbers[row][col] = sum;
         return sum;
     }
 
+    //recursively checks all row and col
+    //return int of sum of unseen hearts
     private int getScan(int row, int col, int sum) {
         for(int x = 0; x < maxNumRows; x++){
             if(board[x][col] == Tile.HEART && !boardUISeen[x][col]){
@@ -144,12 +155,14 @@ public class Board {
         return sum;
     }
 
+    //checks bounds, throws error if invalid
     private void boundsCheck(int row, int col) {
         if(row < 0 || col < 0 || row > maxNumRows || col > maxNumCols){
             throw new IllegalArgumentException("Index does not exist");
         }
     }
 
+    //creates blank tiles: for construction of board only
     private void makeBlank() {
         for(int row = 0; row < maxNumRows; row ++){
             for(int column = 0; column < maxNumCols; column ++){
@@ -168,6 +181,7 @@ public class Board {
         }
     }
 
+    //create heart tiles: for construction of board only
     private void makeHearts(int numHearts) {
         int hearts = 0;
         while(hearts < numHearts){
