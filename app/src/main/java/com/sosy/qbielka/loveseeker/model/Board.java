@@ -81,6 +81,9 @@ public class Board {
         if(!boardUISeen[row][col]) {
             boardUISeen[row][col] = true;
             scansUsed++;
+        }else if (board[row][col] == Tile.HEART && boardNumbers[row][col] == SENTENTIAL){
+            boardUISeen[row][col] = true;
+            scansUsed++;
         }
 
 
@@ -122,23 +125,24 @@ public class Board {
 
 
     //only called in foundHeart.
-    private int updateBoardNums(int row, int col) throws Exception{
+    private void updateBoardNums(int row, int col) throws Exception{
         //checks bounds
         boundsCheck(row, col);
         //in the row of board, if specific tile is unseen, set as seen and update scansUsed
         updateBoardUISeen(boardUISeen[row], col);
+        if (board[row][col] == Tile.HEART && boardNumbers[row][col] == SENTENTIAL){
 
+        }else{
         int sum = 0;
 
-        //get sum of scans in row and col total
-        sum = getScan(row, col, sum);
+            //get sum of scans in row and col total
+            sum = getScan(row, col, sum);
 
-        //update sum number for specific tile in boardNumbers
-        boardNumbers[row][col] = sum;
-        return sum;
+            //update sum number for specific tile in boardNumbers
+            boardNumbers[row][col] = sum;
+        }
     }
 
-    //recursively checks all row and col
     //return int of sum of unseen hearts
     private int getScan(int row, int col, int sum) {
         for(int x = 0; x < maxNumRows; x++){
