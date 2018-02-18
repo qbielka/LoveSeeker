@@ -40,11 +40,11 @@ public class HeartSeeker extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d("heartseeker", "onCreate hit");
+        Log.d(HSTAG, "onCreate hit");
         super.onCreate(savedInstanceState);
-        Log.d("heartseeker", "super.onCreate hit");
+        Log.d(HSTAG, "super.onCreate hit");
         setContentView(R.layout.activity_heart_seeker);
-        Log.d("heartseeker", "setContentView hit");
+        Log.d(HSTAG, "setContentView hit");
 
         populateFromBoard();
     }
