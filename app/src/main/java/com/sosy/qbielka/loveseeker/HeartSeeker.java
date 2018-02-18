@@ -7,6 +7,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
+import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,9 +21,11 @@ import com.sosy.qbielka.loveseeker.model.Board;
 
 public class HeartSeeker extends AppCompatActivity {
     private static final String HSTAG = "HeartSeeker";
+    private static final int MILLISECOND_WAIT = 60000;
 
     private Board newGame = new Board();
-
+    private Handler handler;
+    
     int MAX_ROWS = newGame.getMaxNumRows();
     int MAX_COLS = newGame.getMaxNumCols();
     int MAX_HEARTS = newGame.getTotalNumHearts();
@@ -184,7 +187,14 @@ public class HeartSeeker extends AppCompatActivity {
         congratsMessageFragment dialog = new congratsMessageFragment();
         dialog.show(manager, "congratulatoryMessage");
 
-        finish();
+
+        handler=new Handler();
+        Runnable r=new Runnable() {
+            public void run() {
+                finish();
+            }
+        };
+        handler.postDelayed(r, MILLISECOND_WAIT);
     }
 
     public static Intent makeIntent(Context context) {
