@@ -9,6 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPink"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="31dp">
 
@@ -50,7 +51,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="11dp"
-            android:text="@string/main_menu" />
+            android:text="@string/main_menu"
+            android:textColor="@color/colorPurple"/>
 
 
     </RelativeLayout>

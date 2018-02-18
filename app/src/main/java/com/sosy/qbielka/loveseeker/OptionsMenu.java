@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+
 import com.sosy.qbielka.loveseeker.model.Options;
 
 public class OptionsMenu extends AppCompatActivity {
@@ -26,6 +28,9 @@ public class OptionsMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options_menu);
+
+        TextView textView = (TextView) findViewById(R.id.title_options);
+        textView.setText("Options");
 
         //implement Singleton class Options.java for saving information between sessions purposes
         loadCurrentOptions = Options.getInstance();

@@ -9,6 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPink"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="31dp">
 
@@ -22,7 +23,8 @@
             android:layout_marginLeft="43dp"
             android:layout_marginStart="43dp"
             android:layout_marginTop="15dp"
-            android:text="@string/help_title_string" />
+            android:text="@string/help_title_string"
+            android:textColor="@color/colorPurple"/>
 
         <ImageView
             android:id="@+id/QuinceHead"
@@ -58,7 +60,8 @@
             android:layout_marginStart="17dp"
             android:layout_toEndOf="@+id/QuinceHead"
             android:layout_toRightOf="@+id/QuinceHead"
-            android:text="@string/help_explanation" />
+            android:text="@string/help_explanation"
+            android:textColor="@color/colorPurple"/>
 
         <Button
             android:id="@+id/help_back_btn"
@@ -91,7 +94,8 @@
             android:layout_marginStart="9dp"
             android:layout_toLeftOf="@+id/help_explanation"
             android:layout_toStartOf="@+id/help_explanation"
-            android:text="@string/quince_bio" />
+            android:text="@string/quince_bio"
+            android:textColor="@color/colorPurple"/>
 
         <TextView
             android:id="@+id/lora_bio"
@@ -105,7 +109,8 @@
             android:layout_marginTop="13dp"
             android:text="@string/lora_bio"
             tools:layout_editor_absoluteX="351dp"
-            tools:layout_editor_absoluteY="222dp" />
+            tools:layout_editor_absoluteY="222dp"
+            android:textColor="@color/colorPurple"/>
 
     </RelativeLayout>
 

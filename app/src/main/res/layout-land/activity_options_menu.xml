@@ -6,35 +6,67 @@
     android:layout_height="match_parent"
     tools:context="com.sosy.qbielka.loveseeker.OptionsMenu">
 
-    <LinearLayout
-        android:layout_width="301dp"
-        android:layout_height="295dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <RadioGroup
-            android:id="@+id/radioGroupLoveNum"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="30dp"
+            android:background="@color/colorPink"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout2">
 
-    <LinearLayout
-        android:layout_width="274dp"
-        android:layout_height="315dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/title_options"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:text="Options"
+                android:textSize="18sp"
+                android:textColor="@color/colorPurple"/>
+        </LinearLayout>
 
-        <RadioGroup
-            android:id="@+id/radioGroupBoardSize"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout4"
+            android:layout_below="@+id/linearLayout2"
+            android:background="@color/colorPink">
+
+            <RadioGroup
+                android:id="@+id/radioGroupBoardSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linearLayout4"
+            android:orientation="vertical"
+            android:background="@color/colorPink">
+
+            <RadioGroup
+                android:id="@+id/radioGroupLoveNum"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/linearLayout"
+                android:layout_alignStart="@+id/linearLayout"
+                android:layout_alignTop="@+id/linearLayout" >
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
 </android.support.constraint.ConstraintLayout>

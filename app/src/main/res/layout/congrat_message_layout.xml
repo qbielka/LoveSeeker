@@ -29,5 +29,6 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:text="Congratulation! You won!"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="@color/colorPurple"/>
 </RelativeLayout>
